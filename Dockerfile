@@ -11,7 +11,7 @@ LABEL homepage="https://atc-github.azure.cloud.bmw/MIDA/mida-action-backup/"
 LABEL maintainer="qxz0bao"
 
 # https://github.com/aws/aws-cli/blob/master/CHANGELOG.rst
-ENV AWSCLI_VERSION = '2.5.3'
+ENV AWSCLI_VERSION='1.16.232'
 
 RUN pip install --quiet --no-cache-dir awscli==${AWSCLI_VERSION}
 
