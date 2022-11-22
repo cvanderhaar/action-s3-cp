@@ -2,14 +2,9 @@
 
 set -e
 
-mkdir -p ~/.aws
-touch ~/.aws/credentials
-
 echo "[default]
-aws_access_key_id = ${AWS_ACCESS_KEY_ID}
-aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" > ~/.aws/credentials
+aws_access_key_id = ${aws_access_key_id_tooling}
+aws_secret_access_key = ${aws_secret_access_key_tooling}" > ~/.aws/credentials
 
-aws s3 cp ${FILE} s3://${AWS_S3_BUCKET}${AWS_S3_PATH} \
-            ${AWS_REGION} $*
-
-rm -rf ~/.aws
+aws s3 cp ${file} s3://${aws_s3_bucket}${aws_s3_path} \
+            ${aws_region} $*
